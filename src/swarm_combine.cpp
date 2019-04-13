@@ -33,7 +33,7 @@ ros::init(argc, argv, node_name);
 ros::NodeHandle nh;
 ROS_INFO("Vehicle namespace set to : %s", vehicle_namespace.c_str());
 
-std::string s1, s2, s3, s4;
+std::string s1, s2, s3 ;
 s1 = vehicle_namespace + "/global_position/global" ;
 s2 = vehicle_namespace + "/local_position/pose" ;
 s3 = vehicle_namespace + "/swarm_combined" ;
@@ -45,7 +45,7 @@ s3 = vehicle_namespace + "/swarm_combined" ;
 
    
     ros::Publisher msg_pub = nh.advertise<swarm_combine::swarm_msg>
-            (s4, 100);
+            (s3, 100);
 
     ros::Rate rate(5.0);
   
